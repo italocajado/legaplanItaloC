@@ -22,6 +22,7 @@ const TaskModal = ({isOpen, onClose, onAdd}) =>{
                 value={taskTitle}
                 onChange={(e) => setTaskTitle(e.target.value)}
                 placeholder="Digite Sua tarefa"
+                className={styles.inputField}
                 />
                 <div className={styles.actions}>
                     <button onClick={onClose} className={styles.cancelButton}>Cancelar</button>

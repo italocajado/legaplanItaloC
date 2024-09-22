@@ -1,14 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import TaskModal from '../components/TaskModal';
 import styles from '../styles/Home.module.scss';
 
 export default function home(){
-    const [task, setTask] = useState([
-        { id: 1, title: 'Task 1', completed: false},
-        { id: 2, title: 'Task 2', completed: false},
-        { id: 3, title: 'Task 3', completed: false},
-    ]);
+    const [task, setTask] = useState([]);
     const[isModaLOpen, setIsModalOpen] = useState(false);
+    const [showDeleteDialog,  setShowDeleteDialog] = useState(false);
+
 
     const addTask = (title) =>{
         const newTask = {id: Date.now(), title, completed: false};
@@ -54,7 +54,7 @@ export default function home(){
             <TaskModal
             isOpen={isModaLOpen}
             onClose={() => setIsModalOpen(false)}
-            onAddTask={addTask}
+            onAdd={addTask}
             />
         </div>
     );
