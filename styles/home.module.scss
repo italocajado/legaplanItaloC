@@ -1,14 +1,15 @@
-.title{
+.title {
     font-size: 2rem;
     margin-bottom: 20px;
+    font-family: var(--font-inter);
 }
 
-.taskList{
+.taskList {
     list-style: none;
     padding: 0;
 }
 
-.taskItem{
+.taskItem {
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -18,12 +19,12 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.completed{
+.completed {
     text-decoration: line-through;
     color: gray;
 }
 
-.addButton{
+.addButton {
     width: 100%;
     padding: 15px;
     background: linear-gradient(45deg, #0796D3, #53C0F0);
@@ -33,20 +34,58 @@
     font-size: 1.2rem;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: #0056b3;
     }
 }
 
-.deleteButton{
-    background-color: #e00;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
+.dialogOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
-    &:hover{
-        background-color: #c00;
-    }
+.dialogContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.dialogContent p {
+    margin-bottom: 20px;
+}
+
+.dialogContent button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.dialogContent button:first-of-type {
+    background-color: #E7EEFB;
+}
+
+.dialogContent button:last-of-type {
+    background: linear-gradient(45deg, #D30707, #F05353);
+    color: white;
+}
+
+.container {
+    opacity: 1;
+}
+
+.container.blur {
+    filter: blur(5px);
 }

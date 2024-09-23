@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400&display=swap');
+
+:root {
+    --font-inter: 'Inter Tight', sans-serif;
+}
+
+
 body{
     font-family: var(--font-inter);
     margin: 0;
@@ -9,19 +16,6 @@ body{
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-button{
-    background: linear-gradient(45deg, #0796D3, #53C0F0);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-
-    &:hover{
-        background-color: #0056b3;
-    }
 }
 
 @media (max-width: 768px){

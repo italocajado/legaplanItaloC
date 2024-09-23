@@ -15,8 +15,10 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@next/font": "^14.2.13",
     "approuter": "^0.0.1-security",
-    "next": "^14.2.13",
+    "font": "^0.0.4",
+    "next": "^13.2.4",
     "nextjs": "^0.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
